@@ -7,16 +7,15 @@ window.TrelloPowerUp.initialize({
       .then(function(priority) {
         if (!priority) return []; 
 
-        var colorMap = {
-          'Urgente': 'red',
-          'Alta': 'orange',
-          'Média': 'yellow',
-          'Baixa': 'green'
+        var iconMap = {
+          'Urgent': 'https://cdn-icons-png.flaticon.com/512/1828/1828843.png',    
+          'Important': 'https://cdn-icons-png.flaticon.com/512/1828/1828884.png',  
+          'Medium': 'https://cdn-icons-png.flaticon.com/512/1828/1828817.png',     
+          'Low': 'https://cdn-icons-png.flaticon.com/512/1828/1828961.png'
         };
 
         return [{
-          text: priority,
-          color: colorMap[priority],
+          icon: colorMap[priority],
           refresh: 10 // backup, atualização imediata é feita pelo popup
         }];
       });
@@ -29,9 +28,9 @@ window.TrelloPowerUp.initialize({
 
       var colorMap = {
         'Urgente': 'red',
-        'Alta': 'orange',
-        'Média': 'yellow',
-        'Baixa': 'green'
+        'Important': 'orange',
+        'Medium': 'yellow',
+        'Low': 'blue'
       };
 
       return [{
