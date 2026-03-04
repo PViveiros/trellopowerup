@@ -2,15 +2,42 @@
 <html lang="pt">
 <head>
   <meta charset="UTF-8">
-  <title>Escolher Prioridade</title>
+  <title>Prioridade</title>
   <link rel="stylesheet" href="../css/popup.css">
   <script src="https://p.trellocdn.com/power-up.min.js" crossorigin="anonymous"></script>
 </head>
 <body>
-  <button class="red" data-priority="Urgent">Urgent</button>
-  <button class="orange" data-priority="Important">Important</button>
-  <button class="yellow" data-priority="Medium">Medium</button>
-  <button class="green" data-priority="Low">Low</button>
+
+  <ul class="priority-list">
+    <li data-priority="Urgent" class="priority">
+      <span class="icon red"></span>
+      <span class="label">Urgent</span>
+      <span class="check">✔</span>
+    </li>
+
+    <li data-priority="Important" class="priority">
+      <span class="icon orange"></span>
+      <span class="label">Important</span>
+      <span class="check">✔</span>
+    </li>
+
+    <li data-priority="Medium" class="priority">
+      <span class="icon yellow"></span>
+      <span class="label">Medium</span>
+      <span class="check">✔</span>
+    </li>
+
+    <li data-priority="Low" class="priority">
+      <span class="icon green"></span>
+      <span class="label">Low</span>
+      <span class="check">✔</span>
+    </li>
+
+    <li data-priority="" class="priority clear">
+      <span class="icon gray"></span>
+      <span class="label">Sem prioridade</span>
+    </li>
+  </ul>
 
   <script src="../js/popup.js"></script>
 </body>
