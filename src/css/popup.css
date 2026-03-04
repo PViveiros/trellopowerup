@@ -2,7 +2,6 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   margin: 0;
   padding: 8px;
-  background: #ffffff;
 }
 
 .priority-list {
@@ -21,7 +20,7 @@ body {
 }
 
 .priority:hover {
-  background: #f4f5f7;
+  background: #4b4b4b;
 }
 
 .icon {

@@ -32,14 +32,14 @@ window.TrelloPowerUp.initialize({
         'Urgent': 'red',
         'Important': 'orange',
         'Medium': 'yellow',
-        'Low': 'blue'
+        'Low': 'green'
       };
 
       return [{
-        title: 'Prioridade',        // label que aparece ao lado do badge
-        text: priority,             // valor do badge
-        color: colorMap[priority] || 'blue',
-        callback: function(t) {     // quando clicas no badge
+        title: 'Prioridade',       
+        text: priority,             
+        color: colorMap[priority],
+        callback: function(t) {     
           return t.popup({
             title: 'Alterar prioridade',
             url: './priority-popup.html',
@@ -48,20 +48,20 @@ window.TrelloPowerUp.initialize({
         }
       }];
     });
-},
-  // Botão no card para alterar prioridade
-  'card-buttons': function(t, options) {
-    return [{
-      icon: 'https://cdn-icons-png.flaticon.com/512/1828/1828817.png',
-      text: 'Prioridade',
-      callback: function(t) {
-        return t.popup({
-          title: 'Escolher prioridade',
-          url: './priority-popup.html',
-          height: 150
-        });
-      }
-    }];
-  }
+// },
+//   // Botão no card para alterar prioridade
+//   'card-buttons': function(t, options) {
+//     return [{
+//       icon: 'https://cdn-icons-png.flaticon.com/512/1828/1828817.png',
+//       text: 'Prioridade',
+//       callback: function(t) {
+//         return t.popup({
+//           title: 'Escolher prioridade',
+//           url: './priority-popup.html',
+//           height: 150
+//         });
+//       }
+//     }];
+ }
 
 });
