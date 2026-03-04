@@ -22,6 +22,32 @@ window.TrelloPowerUp.initialize({
       });
   },
 
+  'card-detail-badges': function(t, options) {
+  return t.get('card', 'shared', 'priority')
+    .then(function(priority) {
+      if (!priority) return [];
+
+      var colorMap = {
+        'Urgente': 'red',
+        'Alta': 'orange',
+        'Média': 'yellow',
+        'Baixa': 'green'
+      };
+
+      return [{
+        title: 'Prioridade',        // label que aparece ao lado do badge
+        text: priority,             // valor do badge
+        color: colorMap[priority] || 'blue',
+        callback: function(t) {     // quando clicas no badge
+          return t.popup({
+            title: 'Alterar prioridade',
+            url: './priority-popup.html',
+            height: 150
+          });
+        }
+      }];
+    });
+},
   // Botão no card para alterar prioridade
   'card-buttons': function(t, options) {
     return [{
