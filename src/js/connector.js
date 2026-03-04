@@ -15,7 +15,7 @@ window.TrelloPowerUp.initialize({
         };
 
         return [{
-          icon: colorMap[priority],
+          icon: iconMap[priority],
           refresh: 10 // backup, atualização imediata é feita pelo popup
         }];
       });
