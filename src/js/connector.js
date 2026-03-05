@@ -26,7 +26,7 @@ window.TrelloPowerUp.initialize({
   'card-detail-badges': function(t, options) {
   return t.get('card', 'shared', 'priority')
     .then(function(priority) {
-      if (!priority) return [];
+      if (!priority) priority = 'Sem prioridade';
 
       var iconMap = {
         'Urgent': 'https://cdn-icons-png.flaticon.com/512/1828/1828843.png',
