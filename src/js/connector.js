@@ -15,9 +15,7 @@ window.TrelloPowerUp.initialize({
         };
 
         return [{
-          icon: {
-            url: iconMap[priority]
-          },
+          icon: iconMap[priority],
           refresh: 10 // backup, atualização imediata é feita pelo popup
         }];
       });
@@ -38,7 +36,7 @@ window.TrelloPowerUp.initialize({
         
       return [{
         text: priority, 
-        title: null,
+        title: 'Prioridade',
         color: colorMap[priority],            
         callback: function(t) {     
           return t.popup({
