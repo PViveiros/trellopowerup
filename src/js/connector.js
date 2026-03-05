@@ -28,19 +28,18 @@ window.TrelloPowerUp.initialize({
     .then(function(priority) {
       if (!priority) priority = 'Sem prioridade';
 
-      var iconMap = {
-        'Urgent': 'https://cdn-icons-png.flaticon.com/512/1828/1828843.png',
-        'Important': 'https://cdn-icons-png.flaticon.com/512/1828/1828884.png',
-        'Medium': 'https://cdn-icons-png.flaticon.com/512/1828/1828817.png',
-        'Low': 'https://cdn-icons-png.flaticon.com/512/1828/1828961.png',
-        'Sem prioridade': 'https://cdn-icons-png.flaticon.com/512/1828/1828961.png'
-      };
-
+      var colorMap = {
+          'Urgent': 'red',    
+          'Important': 'orange',  
+          'Medium': 'yellow',     
+          'Low': 'blue',
+          'Sem prioridade': 'light-gray'
+        };
+        
       return [{
-        text: priority,             
-       // icon: {
-       //   url: iconMap[priority]
-       //},
+        text: priority, 
+        title: null,
+        color: colorMap[priority],            
         callback: function(t) {     
           return t.popup({
             title: 'Alterar prioridade',
@@ -51,18 +50,4 @@ window.TrelloPowerUp.initialize({
       }];
     });
 },
-  // Botão no card para alterar prioridade
-  'card-buttons': function(t, options) {
-    return [{
-      text: 'Prioridade',
-      callback: function(t) {
-        return t.popup({
-          title: 'Escolher prioridade',
-          url: './priority-popup.html',
-          height: 220
-        });
-      }
-    }];
- }
-
 });
