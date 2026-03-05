@@ -3,7 +3,7 @@ var t = window.TrelloPowerUp.iframe();
 t.get('card', 'shared', 'priority')
   .then(function(currentPriority) {
 
-    document.querySelectorAll('.priority').forEach(function(item) {
+    document.querySelectorAll('.item').forEach(function(item) {
 
       if (item.dataset.priority === currentPriority) {
         item.classList.add('active');
