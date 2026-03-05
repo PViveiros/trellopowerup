@@ -17,7 +17,16 @@ window.TrelloPowerUp.initialize({
           'Sem prioridade': t.signUrl(TrelloPowerUp.util.relativeUrl('./icons/sem-prioridade.png'))
         };
 
+        var colorMap = {
+          'Urgent': 'red',    
+          'Important': 'orange',  
+          'Medium': 'yellow',     
+          'Low': 'blue',
+          'Sem prioridade': 'light-gray'
+        };
+
         return [{
+          color: colorMap[priority],
           icon: iconMap[priority],
           refresh: 10 // backup, atualização imediata é feita pelo popup
         }];
