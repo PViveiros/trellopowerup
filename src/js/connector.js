@@ -10,11 +10,11 @@ window.TrelloPowerUp.initialize({
         if (!priority) priority = 'Sem prioridade'; 
 
         var iconMap = {
-          'Urgent': t.util.relativeUrl('./icons/urgent.png'),
-          'Important': t.util.relativeUrl('./icons/important.png'),
-          'Medium': t.util.relativeUrl('./icons/medium.png'),
-          'Low': t.util.relativeUrl('./icons/low.png'),
-          'Sem prioridade': t.util.relativeUrl('./icons/sem-prioridade.png')
+          'Urgent': t.signUrl(TrelloPowerUp.util.relativeUrl('./icons/urgent.png')),
+          'Important': t.signUrl(TrelloPowerUp.util.relativeUrl('./icons/important.png')),
+          'Medium': t.signUrl(TrelloPowerUp.util.relativeUrl('./icons/medium.png')),
+          'Low': t.signUrl(TrelloPowerUp.util.relativeUrl('./icons/low.png')),
+          'Sem prioridade': t.signUrl(TrelloPowerUp.util.relativeUrl('./icons/sem-prioridade.png'))
         };
 
         return [{
