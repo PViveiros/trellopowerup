@@ -5,13 +5,14 @@ window.TrelloPowerUp.initialize({
     // Obtém a prioridade que se encontra no storage do card
     return t.get('card', 'shared', 'priority')
       .then(function(priority) {
-        if (!priority) return []; 
+        if (!priority) priority = 'Sem prioridade'; 
 
         var iconMap = {
           'Urgent': 'https://cdn-icons-png.flaticon.com/512/1828/1828843.png',    
           'Important': 'https://cdn-icons-png.flaticon.com/512/1828/1828884.png',  
           'Medium': 'https://cdn-icons-png.flaticon.com/512/1828/1828817.png',     
           'Low': 'https://cdn-icons-png.flaticon.com/512/1828/1828961.png',
+          'Sem prioridade': 'https://cdn-icons-png.flaticon.com/512/1828/1828961.png'
         };
 
         return [{
@@ -33,7 +34,7 @@ window.TrelloPowerUp.initialize({
         'Important': 'https://cdn-icons-png.flaticon.com/512/1828/1828884.png',
         'Medium': 'https://cdn-icons-png.flaticon.com/512/1828/1828817.png',
         'Low': 'https://cdn-icons-png.flaticon.com/512/1828/1828961.png',
-        'Sem prioridade': ''
+        'Sem prioridade': 'https://cdn-icons-png.flaticon.com/512/1828/1828961.png'
       };
 
       return [{
