@@ -11,7 +11,7 @@
   },
   "scripts": {
     "build": "parcel build src/html/*.html --public-url /trellopowerup/",
-    "deploy": "gh-pages -d dist"
+    "deploy": "npm run build && gh-pages -d dist"
   },
   "devDependencies": {
     "gh-pages": "^6.3.0",
