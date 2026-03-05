@@ -1,4 +1,11 @@
+import urgentIcon from '../icons/urgent.png';
+import importantIcon from '../icons/important.png';
+import mediumIcon from '../icons/medium.png';
+import lowIcon from '../icons/low.png';
+import noneIcon from '../icons/sem-prioridade.png';
+
 window.TrelloPowerUp.initialize({
+   
 
     'card-badges': function(t, options) {
     // Obtém a prioridade que se encontra no storage do card
@@ -7,11 +14,11 @@ window.TrelloPowerUp.initialize({
         if (!priority) priority = 'Sem prioridade'; 
 
         var iconMap = {
-          'Urgent': './icons/urgent.png',
-          'Important': './icons/important.png',
-          'Medium': './icons/medium.png',
-          'Low': './icons/low.png',
-          'Sem prioridade': './icons/sem-prioridade.png'
+          'Urgent': urgentIcon,
+          'Important': importantIcon,
+          'Medium': mediumIcon,
+          'Low': lowIcon,
+          'Sem prioridade': noneIcon
         };
 
         return [{
