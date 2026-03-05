@@ -8,11 +8,13 @@
   "staticFiles": {
     "staticPath": "public",
     "watcherGlob": "**"
-},
+  },
   "scripts": {
-    "build": "parcel build src/html/*.html"
+    "build": "parcel build src/html/*.html --dist-dir dist --public-url /trellopowerup/",
+    "deploy": "gh-pages -d dist"
   },
   "devDependencies": {
+    "gh-pages": "^6.3.0",
     "parcel-bundler": "^1.12.5"
   },
   "dependencies": {
