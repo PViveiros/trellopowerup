@@ -1,8 +1,4 @@
-import urgentIcon from '../icons/urgent.png';
-import importantIcon from '../icons/important.png';
-import mediumIcon from '../icons/medium.png';
-import lowIcon from '../icons/low.png';
-import noneIcon from '../icons/sem-prioridade.png';
+
 
 window.TrelloPowerUp.initialize({
    
@@ -14,11 +10,11 @@ window.TrelloPowerUp.initialize({
         if (!priority) priority = 'Sem prioridade'; 
 
         var iconMap = {
-          'Urgent': urgentIcon,
-          'Important': importantIcon,
-          'Medium': mediumIcon,
-          'Low': lowIcon,
-          'Sem prioridade': noneIcon
+          'Urgent': '/icons/urgent.png',
+          'Important': '/icons/important.png',
+          'Medium': '/icons/medium.png',
+          'Low': '/icons/low.png',
+          'Sem prioridade': '/icons/sem-prioridade.png'
         };
 
         return [{
