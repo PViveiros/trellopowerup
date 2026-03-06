@@ -12,14 +12,16 @@ window.TrelloPowerUp.initialize({
         var iconMap = {
           'Urgent': t.signUrl(TrelloPowerUp.util.relativeUrl('./icons/urgent.png')),
           'Important': t.signUrl(TrelloPowerUp.util.relativeUrl('./icons/important.png')),
+          'High': t.signUrl(TrelloPowerUp.util.relativeUrl('./icons/high.png')),
           'Medium': t.signUrl(TrelloPowerUp.util.relativeUrl('./icons/medium.png')),
           'Low': t.signUrl(TrelloPowerUp.util.relativeUrl('./icons/low.png')),
           'Sem prioridade': t.signUrl(TrelloPowerUp.util.relativeUrl('./icons/sem-prioridade.png'))
         };
 
         var colorMap = {
-          'Urgent': 'red',    
-          'Important': 'orange',  
+          'Urgent': 'purple',    
+          'Important': 'red',  
+          'High': 'orange',
           'Medium': 'yellow',     
           'Low': 'blue',
           'Sem prioridade': 'light-gray'
@@ -39,8 +41,9 @@ window.TrelloPowerUp.initialize({
       if (!priority) priority = 'Sem prioridade';
 
       var colorMap = {
-          'Urgent': 'red',    
-          'Important': 'orange',  
+          'Urgent': 'purple',    
+          'Important': 'red',  
+          'High': 'orange',
           'Medium': 'yellow',     
           'Low': 'blue',
           'Sem prioridade': 'light-gray'

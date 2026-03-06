@@ -10,8 +10,8 @@
     "watcherGlob": "**"
   },
   "scripts": {
-    "build": "parcel build src/html/*.html --public-url /trellopowerup/",
-    "deploy": "npm run build && gh-pages -d dist"
+  "build": "parcel build src/html/*.html -d dist --public-url /trellopowerup/",
+  "deploy": "npm run build && gh-pages -d dist"
   },
   "devDependencies": {
     "gh-pages": "^6.3.0",
